@@ -21,10 +21,10 @@ In this project, you build an app that let's you display a todo list from reduce
 - [X] Clone your OWN version of the repository in your terminal
 - [X] CD into the project base directory `cd reducer-todo`
 - [X] Create a new react app using CRA
-- [ ] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
