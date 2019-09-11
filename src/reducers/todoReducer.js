@@ -19,7 +19,7 @@ export const initialState = {
   }]
 }
 
-// build out a simple reducer with just a default return for now
+
 // Reducer
 export const reducer = (state, action) => {
   switch(action.type) {
@@ -27,11 +27,33 @@ export const reducer = (state, action) => {
       return {todos: [...state.todos, {item: action.payload, compelted: false, id: Math.random() }] }
 
       case "COMPLETE":
-        return {todos: state.todos.map( todo => todo.id === action.payload ? {...todo, completed: !todo.complete} : todo )}
+        return {todos: state.todos.map(todo => todo.id === action.payload ? {...todo, completed: !todo.complete} : todo )}
 
         case "CLEAR_TODOS":
+          //The filter() method creates a new array with all elements that pass the test implemented by the provided function.
           return {todos: state.todos.filter(todo => !todo.completed) }
       default: return state;
   }
-
 }
+
+
+
+
+
+
+
+
+//build out a simple reducer with just a default return for now
+
+// export const reducer = (state, action) => {
+//   return state; <--- default return
+// }
+
+//  build your initial state object that has a list of todos
+// export const initialState = {
+//   todos: [{
+//     item: 'Learn about reducers',
+//     completed: false,
+//     id: 12325478545
+//   }]
+// }

@@ -4,8 +4,9 @@ const TodoForm = ({ dispatch }) => {
     
     const [todo, setTodo] = useState('');
 
-    // Build a function that will dispatch an action to add a new todo
     // Handler Functions
+
+    // set the state to the users input
     const handleChange = e => {
         console.log(e.target.value)
         setTodo(e.target.value)
@@ -14,8 +15,10 @@ const TodoForm = ({ dispatch }) => {
     const handleSubmit = e => {
         e.preventDefault();
         console.log(todo)
+        // send this action to my reducer fn
+                  // payload is my state
         dispatch({ type: "ADD_TODO", payload: todo })
-        setTodo('');
+        setTodo(''); // <-- reset stat to empty string
     }
 
     const clickHanlder = () => {
@@ -27,11 +30,11 @@ const TodoForm = ({ dispatch }) => {
     <div className="todo-form">
       <form onSubmit={handleSubmit}>
         <input
-        className="todo-input"
+          className="todo-input"
           onChange={handleChange}
           type="text"
           name="todo"
-          value={todo}
+          value={todo} // <-- value = state
           placeholder="Add Todo"
         />
         <div className="btn-wrapper">
