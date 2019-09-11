@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/*
+my styles 
+*/
+.completed {
+  text-decoration: line-through;
+}
