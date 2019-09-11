@@ -18,22 +18,32 @@ const TodoForm = ({ dispatch }) => {
         setTodo('');
     }
 
+    const clickHanlder = () => {
+        dispatch({type: "CLEAR_TODOS" })
+    }
+
 
   return (
-    <div>
+    <div className="todo-form">
       <form onSubmit={handleSubmit}>
         <input
+        className="todo-input"
           onChange={handleChange}
           type="text"
           name="todo"
           value={todo}
           placeholder="Add Todo"
         />
+        <div className="btn-wrapper">
         <button
         type="submit"
         >
           Add +
         </button>
+        <button
+      onClick={clickHanlder}
+      >Clear Completed</button>
+        </div>
       </form>
     </div>
   );

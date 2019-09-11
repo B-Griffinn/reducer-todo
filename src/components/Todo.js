@@ -16,7 +16,10 @@ const Todo = ({ todo, dispatch }) => {
 
   return (
     <div className="todo">
-      <h2 className="todo-header" onClick={clickHandler} id={todo.item}>{todo.item}</h2>
+      <ul>
+        <h2 className="todo-header" onClick={clickHandler} id={todo.item}>{todo.item}</h2>
+      </ul>
+      
     </div>
   );
 };
